@@ -15,7 +15,11 @@ Route::get('/about', function() {
     return view('about');
 });
 
-Route::get('/', function () {
+Route::get('/', function() {
+    return view('about');
+});
+
+Route::get('/cctv', function () {
     // call API
     $apiclient = new \GuzzleHttp\Client();
     $response = $apiclient->request('GET', 'http://api.jakarta.go.id/v1/cctvbalitower/', [
