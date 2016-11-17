@@ -51,6 +51,7 @@
             <div class="collapse navbar-collapse" id="spark-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
+                    <li><a href="{{ url('/cctv') }}/">CCTV</a></li>
                     <li><a href="{{ url('/about') }}/">About</a></li>
                 </ul>
             </div>
