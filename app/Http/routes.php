@@ -23,7 +23,7 @@ Route::get('/', function () {
             'Content-Type' => 'application/json',
             'Authorization' => 'yjjwfulC7NbcAFqKxEAWF7bBE56JbuBa5JK1C7W5x3cgi5EuL0uNIy+Cl0LTQPLk'
         ],
-        'proxy' => 'http://vicovwebc:8081'
+        //'proxy' => 'http://vicovwebc:8081'
     ]);
 
     $retobj = $response->getBody();
