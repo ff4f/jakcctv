@@ -1,45 +1,20 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Laravel</title>
+@extends('layouts.app')
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+@section('content')
+    <table class="table table-responsive">
+        <thead>
+        <th>Nama CCTV</th>
+        <th>Google Maps Loc</th>
+        </thead>
 
-        <style>
-            html, body {
-                height: 100%;
-            }
+        <tbody>
+        @foreach($cctvdata as $data)
+            <tr>
+                <td><a href="{!! $data->url !!}">{!! $data->id_site !!}</a></td>
+                <td><a href="http://maps.google.com/maps?&z=10&q={!! $data->location->latitude !!}+{!! $data->location->longitude !!}&ll={!! $data->location->latitude !!}+{!! $data->location->longitude !!}">{!! $data->location->latitude !!}, {!! $data->location->longitude !!}</a></td>
+            </tr>
+        @endforeach
+        </tbody>
 
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
-
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
-
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
-
-            .title {
-                font-size: 96px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">Laravel 5 hehe</div>
-            </div>
-        </div>
-    </body>
-</html>
+    </table>
+@stop
